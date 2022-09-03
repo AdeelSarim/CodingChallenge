@@ -1,4 +1,6 @@
 const flatten = (arr) => {
+  if (!Array.isArray(arr)) return -1;
+
   if (!arr.length) return arr;
 
   return arr.reduce((flatArr, elem) => {

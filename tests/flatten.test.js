@@ -1,6 +1,13 @@
 const flatten = require('../src/flatten');
 
 describe("flatten", () => {
+
+  it("it should return -1 on wrong input", () => {
+    let wrongInput = 23;
+
+    expect(flatten(wrongInput)).toEqual(-1);
+  });
+
   it("it should not change the input", () => {
     let nestedArr = [1, 2, 3, [4, 5, [6]]];
     flatten(nestedArr);
